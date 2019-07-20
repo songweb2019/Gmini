@@ -1,0 +1,96 @@
+#footer{
+  width:1600px;
+  height:200px;
+  background: #080635;
+  /* box-sizing: border-box;
+  border:1px solid red; */
+}
+/* 列表 */
+.footlist{
+  width:1000px;
+  height: 120px;
+  text-align: center;
+  /* box-sizing: border-box;
+  border:1px solid black; */
+}
+ .footlist li{
+  display: inline-block;
+  margin-right: 20px;
+  margin-top:45px;
+  cursor: pointer;
+}
+/* 字体 */
+.footlist li p{
+  color: #cacaca;
+  font: 18px 华文仿宋;
+  margin-top:90px;
+  /* box-sizing: border-box;
+  border:1px solid gray; */
+}
+.footlist li:hover p{
+  color:#fff;
+  transition:all 1s linear;
+}
+/* 背景图 */
+.footlist li:nth-child(2){
+  width:100px;
+  height:100px;
+  background: url(../img/footer/mars.png) no-repeat 50% 50%;
+  /* box-sizing: border-box;
+  border:1px solid red; */
+}
+.footlist li:nth-child(3){
+  width:100px;
+  height:100px;
+  background: url(../img/footer/sun.png) no-repeat 50% 50%;
+  /* box-sizing: border-box;
+  border:1px solid green; */
+}
+.footlist li:nth-child(4){
+  width:100px;
+  height:100px;
+  background: url(../img/footer/monster.png) no-repeat 50% 50%;
+  /* box-sizing: border-box;
+  border:1px solid blue; */
+}
+.footlist li:last-child{
+  width:100px;
+  height:100px;
+  background: url(../img/footer/altman.png) no-repeat 50% 50%;
+  /* box-sizing: border-box;
+  border:1px solid darkblue; */
+}
+/* 联系 */
+.footcont{
+  width: 200px;
+  display:block;
+  position: relative; 
+  left:1200px;
+  top:-80px;
+  text-align: right;
+}
+.footcont a img{
+  width: 40px;
+  margin-right:20px;
+}
+.footcont a img:hover{
+  border-radius: 50%;
+  box-shadow: 0 0 5px 0 #fff;
+
+}
+.footcont p{
+  text-align: center;
+  color:#cacaca;
+  margin-top:10px;
+}
+
+/* 版权 */
+.footcopy{
+  margin-top:-50px;
+  margin-right:100px;
+  color: #cacaca;
+  text-align: right;
+  /* box-sizing: border-box;
+  border:1px solid red; */
+}
+

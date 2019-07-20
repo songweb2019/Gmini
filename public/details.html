@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>产品详情</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/details.css">
+</head>
+<body>
+<header id="header"></header>  
+<div id="details">
+  <div class="detailsheadtitle"><h2>详情</h2></div>
+  <div id="detailsleft">
+    <ul class="tree">
+      <li>
+        <span class="open">星球列表</span>
+        <ul>
+          <li>星球01</li>
+          <li>星球02</li>
+          <li>星球03</li>
+          <li>星球04</li>
+        </ul>
+      </li>
+      <li>
+        <span>星球信息</span>
+        <ul>
+          <li>通知公告</li>
+          <li>公司新闻</li>
+          <li>规章制度</li>
+        </ul>
+      </li>
+      <li>
+        <span>星际反馈</span>
+        <ul>
+          <li>关于我们</li>
+          <li>联系我们</li>
+          <li>加入我们</li>
+          <li>问题反馈</li>
+          <li>售后服务</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div id="detailsright">
+   <div class="detailscenter">
+   <div id="super-mask"></div>
+   <div id="mask" class="imgLastDiv"></div>
+   <div id="kzylXiaoGuo"></div>
+   <div class="detailsbgimg">
+     <img src="./img/index/shop/shop1.jpg">
+   </div>
+   <div class="detailssmimg">
+     <img src="./img/index/shop/shop1sm.jpg">
+     <img src="./img/index/shop/shop1sm.jpg">
+     <img src="./img/index/shop/shop1sm.jpg">
+     <img src="./img/index/shop/shop1sm.jpg">
+   </div>
+   <div class="detailsbgtxt">
+      <h1 class="title">行星04</h1>
+      <h3 class="subtitle">银河太阳星域晶蓝星</h3>      
+      <p>￥99999.00</p>
+      <p>直径10000*20000</p>
+      <p>加入购物车</p>
+   </div>
+  </div> 
+  </div>
+
+</div> 
+<!-- <div id="pop"></div>  -->
+<footer id="footer"></footer>
+<script src="./js/jquery-1.11.3.js"></script>
+<script src="js/headfoot.js"></script>
+<script src="./js/details.js"></script>
+<!-- <script src="./js/jquery-3.2.1.js"></script> -->
+<script>
+//DOM 4步:
+//1. 查找触发事件的元素
+//--找到每个菜单中的标题span元素，每个标题都可以点击
+var spans=document.querySelectorAll("ul.tree span");
+//2. 绑定事件处理函数
+//--遍历spans中每个span
+for(var span of spans){
+	//为每个span绑定单击事件
+	span.onclick=function(){
+		//3. 查找要修改的元素
+		//获得当前点击的span
+		var span=this;
+		//4. 修改元素:
+		//如果当前span是开着的(className为open) 
+		if(span.className=="open"){
+			//--只要关闭自己span即可(清除span上的class open)
+			span.className="";
+		}else{//否则，说明自己是关着的。
+			//先找ul下开着(class为open)的其它span
+			var open=document.querySelector(	"ul.tree span.open"	);
+			//如果找到(open不为null),才关上正在开着的span
+			open!=null&&(open.className="")
+			//再把当前span自己打开(设置span的class为open)
+			span.className="open";
+		}
+	}
+}//循环结束，全局span，始终指向最后一个span
+
+pop.onclick=function(e){
+	console.log(e.screenX, e.screenY)
+	console.log(e.clientX, e.clientY)
+	console.log(e.offsetX, e.offsetY)
+}
+//实现定义开关: 
+var canMove=false;//开始时暂时不可移动
+//定义变量保存拖拽开始时鼠标在图片内的相对偏移距离
+var offsetX,offsetY;
+//当鼠标在pop上按下时
+pop.onmousedown=function(e){
+	canMove=true;//打开开关
+	//当按下鼠标打开开关时，立刻记录在图片内的相对偏移距离
+	offsetX=e.offsetX;
+	offsetY=e.offsetY;
+}
+//当鼠标在窗口中移动时
+window.onmousemove=function(e){
+	//只有开关打开时
+	if(canMove==true){
+		//才同时改变pop的位置
+		//先获得鼠标相对于文档显示区的坐标
+		var left=e.clientX;
+		var top=e.clientY;
+		//再设置pop的left和top与鼠标的位置相同
+		pop.style.left=left-offsetX+"px";
+		pop.style.top=top-offsetY+"px";
+	}
+}
+//当鼠标在pop上抬起时
+pop.onmouseup=function(){
+	canMove=false;//关闭开关
+}
+</script>
+</body>
+</html>

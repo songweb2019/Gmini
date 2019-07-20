@@ -1,0 +1,83 @@
+#header{
+  width:1600px;
+  height:100px;
+  background-image:repeating-linear-gradient(to right,#513357,#2d1c48,#2d1c48,#080635,#080635);
+  /* box-sizing: border-box;
+  border:1px solid red; */
+}
+.headul li{
+  float: left;
+}
+
+/* logo */
+.headlogo{
+  width:800px;
+  margin-left:100px;
+  /* box-sizing: border-box;
+  border:1px solid blue; */
+}
+.headlogo p:first-child{
+  color:#f3f3f3;
+  font:20px Castellar;
+  opacity: 0.6;
+  /* box-sizing: border-box;
+  border:1px solid blue;  */
+}
+
+.headlogo .logoimg{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background: url(../img/header/logowhite.png) no-repeat;
+  position: relative;;
+  left:0px;
+  animation: fan 20s linear infinite;
+  /* box-sizing: border-box;
+  border:1px solid blue; */
+}
+@keyframes fan{
+  0%{transform: rotate(0deg);}
+  25%{transform:rotate(180deg);background: url(../img/header/logored.png) no-repeat;}
+  50%{transform:rotate(360deg);background: url(../img/header/logoblue.png) no-repeat; left:700px;}
+  75%{transform: rotate(180deg);background: url(../img/header/logopink.png) no-repeat;}
+  100%{transform: rotate(0deg);}
+}
+
+
+/* 搜索框 */
+.headseach{
+  width:400px;
+  text-align: center;
+  margin-top:20px;
+  /* box-sizing: border-box;
+  border:1px solid blue; */
+}
+.headseach input{
+  width: 300px;
+  height:30px;
+  color:#cacaca;
+  border:1px solid #cacaca;
+  border-radius: 5px;
+  text-indent:35px;
+  outline: none;
+  font-size:16px;
+  background: url(../img/header/search.png) no-repeat 0%;
+}
+
+/* 登录 注册 */
+.headlogin{ 
+  width: 200px;
+  text-align: center;
+  margin-top:20px;
+  /* box-sizing: border-box;
+  border:1px solid blue;  */
+}
+.headlogin div a{
+  color: #cacaca;
+  font-size:18px;
+  padding:0px 10px;
+}
+.headlogin div a:hover{
+  color:#f3f3f3;
+  border-bottom:1px solid #cacaca;
+}

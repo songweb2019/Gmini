@@ -1,0 +1,339 @@
+#main{
+  width:1600px;
+  height:940px;
+  color: #f3f3f3;
+  /* background:url(../img/index/background/bg2.jpg) no-repeat; */
+}
+/* 标签页 切换 */
+.tabs{
+  height:940px;
+  background: #fdf4f4;
+}
+/* 标签页 列表 ul li */
+.tabs #tab li{
+  width:150px;
+  height:40px;
+  border-radius: 5px;
+  border-right:1px solid #fff;
+  border-bottom:1px solid rgba(0,0,0,0.1);
+  display:inline-block;
+  text-align: center;
+}
+.tabs #tab li:last-child{
+  border-right:none;
+}
+/* 标签页 列表 ul li a */
+.tabs #tab li a{
+  padding:8px 30px;
+  font-size:17px;
+  line-height:38px;
+  color:#2d1c48;
+}
+.tabs #tab li:hover{
+  border-bottom: 1px solid #6215dd;
+  background: #c2c2c2;
+}
+.tabs #tab li a:hover{
+   color: #6215dd;
+}
+
+/* 标签页 列表 li.active*/
+.tabs #tab .active{
+  background: #c2c2c2;
+  border-bottom: 1px solid #6215dd;
+}
+.tabs #tab .active>a{
+  color: #6215dd;
+}
+
+/* 标签页 内容*/
+.tabs #content{
+  position: relative;
+}
+.tabs #content1,.tabs #content2,.tabs #content3{
+  width:1600px;
+  height:900px;
+  position: absolute;
+  top:0px;
+  left:0px;
+}
+/* 标签页 内容 1 */
+.tabs #content1{
+  background-image:repeating-linear-gradient(to right,#513357,#2d1c48,#2d1c48,#080635,#080635);
+  /* background:url(../img/index/background/bg1.jpg); */
+}
+
+
+/* 按钮 */
+#content1 #cont1btn{
+  width: 250px;
+  height: 40px;
+  position: relative;
+  top:0px;
+  left:0px;
+  text-align: center;
+  background: rgba(0,0,0,0.1);
+}
+#cont1btn button{
+  width: 20px;
+  height: 20px;  
+  border:1px solid wheat;
+  margin: 10px 5px;
+}
+#cont1btn .cont1btn1{
+  background-image:repeating-linear-gradient(to right,#513357,#2d1c48,#2d1c48,#080635,#080635);
+}
+#cont1btn .cont1btn2{
+  background-image:repeating-linear-gradient(to right,#43aff7,#20a6f3,#40cbe4,#24d1f0);
+}
+#cont1btn .cont1btn3{
+  background-image:repeating-linear-gradient(to right,#d539f5,#9a529c,#c940c2,#bd2abd,#9d15af);
+}
+#cont1btn .cont1btn4{
+  background-image:repeating-linear-gradient(to right,#33573b,#2d7044,#30b87f,#18c74d,#1b8b57);
+}
+#cont1btn .cont1btn5{
+  background-image:repeating-linear-gradient(to right,#4f5733,#a7a04b,#c7bf4d,#bbdd22,#dacd1f);
+}
+
+
+/* 飞机 */
+#content1 #cont1plane{
+  width:700px;
+  position: absolute;
+  top:10px;
+  line-height: 100px;
+  right:150px;
+  text-align: center;
+}
+
+/* 文字介绍 */
+#content1txt{
+  width: 500px;
+  height: 400px;
+  color:#f3f3f3;
+  padding: 0px 40px;
+  position: relative;
+  top:20px;
+  left:800px;
+  border:1px solid #fff;
+}
+#content1txt .cont1title{
+  margin-top:20px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 50px;
+}
+#content1txt .cont1font{
+  font-size: 16px;
+  margin-top:20px;
+  border:0;
+  line-height: 30px;
+}
+
+
+/* 标签页 内容 2 */
+.tabs #content2{
+  background:url(../img/index/background/bg5.jpg) no-repeat;
+}
+/*  树形导航 */
+#content2 #cont2top{
+  margin-left: 50px;
+}
+#content2 #cont2top div{
+  float: left;
+  height: 100px;
+  line-height:100px;
+}
+#cont2top1,#cont2top3{
+  background: rgba(0,0,0,0.1);
+}
+#cont2top1{/*起始样式*/
+  width:65px;
+  overflow: hidden;
+  transition: all .3s linear;
+}
+#cont2top2{
+  cursor: pointer;
+}
+
+/* 商品列表 */
+#productlist{
+  width: 1200px;
+  height: 800px;
+  position: relative;
+  top:100px;
+  left:200px;
+}
+
+.topright{
+  right:200px;
+}
+.bottomleft{
+  bottom: 0px;
+}
+.bottomright{
+  bottom: 0px;
+  right:200px;
+}
+
+#productlist .productlist{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  margin-left:150px;
+}
+/* 主标题 */
+.productlist .title{
+  color: #fff;
+}
+/* 副标题 */
+.productlist .subtitle a{
+  color: #f3f3f3;
+}
+.productlist .subtitle a:hover{
+  text-decoration:underline;
+}
+/* 加入购物车 */
+.productlist .shopcar{
+  color: #fff;
+  border:1px solid #20a6f3;
+  background:transparent;
+  font-size: 14px;
+  position: absolute;
+  top:5px;
+  right: 40px;
+}
+/* 商品图片01 */
+.productlist .shopimg{
+  width: 200px;
+  opacity: 0.8;
+  margin-left: 50px;
+  margin-top:20px;
+  margin-bottom:20px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 0px white;
+  margin-right:60px;
+  animation: planet 30s linear infinite;
+}
+@keyframes planet{
+  0%{transform: rotate(0deg);}
+  25%{transform:rotate(180deg);}
+  50%{transform:rotate(360deg);width:205px;}
+  75%{transform: rotate(180deg);}
+  100%{transform: rotate(0deg);}
+}
+
+/* 价格 */
+.productlist .price{
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  margin-left:140px;
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  color: purple;
+  background: #fff;
+  opacity: 0.6;
+}
+
+/* 查看详情 */
+.productlist .lookdetails{
+  text-align: center;
+
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin-top:15px;
+  margin-left:85px;
+  line-height: 40px;
+  border: 1px solid wheat;
+  color: #ffffff;
+  background:rgba(255,255,255,0.1);
+}
+.productlist .lookdetails:hover{
+ color: #20a6f3;
+}
+
+
+
+/* 标签页 内容 3 */
+.tabs #content3{
+  background:url(../img/index/background/bg3.jpg) no-repeat;
+}
+#content3 #cont3car{
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  top:100px;
+  text-align: center;
+  box-sizing: border-box;
+  border:1px solid white;
+}
+#cont3car #datacar{
+  width: 800px;
+  margin: 0 auto;
+  margin-top:50px;
+  border-collapse: collapse;
+  background: rgba(0,0,0,0.5)
+}
+#datacar td,th{
+  height: 40px;
+  border: 1px solid #fff;
+}
+#datacar  td[colspan="4"]{text-align: right;}
+
+
+/* 侧边栏 */
+#sidebar{
+  width: 60px;
+  height: 400px;
+  background:black;
+  border-radius: 60px;
+  position: fixed;
+  text-align: center;
+  right:10px;
+  top:200px;
+  z-index:9999;
+}
+.sidediv1,.sidediv2,.sidediv3,.sidediv4,.sidediv5{
+  margin:10px 0px ;
+}
+.sidediv1{
+  width: 50px;
+  height: 60px;
+  background:url(../img/index/aside/zxkf.gif) no-repeat 5px 20px;
+}
+.sidediv2{
+  width:40px;
+  height:40px;
+  background:url(../img/index/aside/news.png) no-repeat 20px 20px;
+}
+.sidediv3{
+  width:40px;
+  height:40px;
+  background:url(../img/index/aside/shops.png) no-repeat 20px 20px;
+}
+.sidediv4{
+  width:40px;
+  height:40px;
+  background:url(../img/index/aside/shopcar.png) no-repeat 20px 20px;
+}
+.sidediv5{
+  width:40px;
+  height:40px;
+  background:url(../img/index/aside/returntop.png) no-repeat 20px 20px;
+}
+#sidebar a{
+  color: #f3f3f3;
+}
+#sidebar a:hover{
+  color: #d539f5;
+}
+#sidebar p{
+  font-size: 12px;
+  line-height:10px;
+}
+

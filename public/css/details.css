@@ -1,0 +1,105 @@
+#details{
+  width:1600px;
+  height: 900px;
+  /* background-image:repeating-linear-gradient(to right,#a829c2,#bb9bf0,#742aec); */
+  background:url('../img/index/background/bg2.jpg');
+  color:#f3f3f3;
+}
+/* 头标 */
+.detailsheadtitle{
+  width: 1600px;
+  height: 40px;
+  text-align: center;
+}
+/* 左列 */
+#detailsleft{
+  width: 250px;
+  height:800px;
+  position: absolute;
+  margin-left:50px;
+  border: 1px solid #ccc;
+}
+#detailsleft .tree{
+  margin-top:30px;
+}
+#detailsleft .tree li{
+  padding:10px 20px;
+}
+#detailsleft li span{
+	padding-left: 20px;
+	cursor: pointer;
+  background: url("../img/details/add.png") no-repeat center left;
+}
+#detailsleft li ul{
+	/*display: none; */
+	height:0;/*106px*/
+	overflow:hidden;
+  transition:all .5s linear;
+  margin-left:20px;
+}
+#detailsleft li ul li{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+#detailsleft li ul li:hover{
+  background:rgba(222,0,0,0.1);
+}
+#detailsleft .open{ 
+	background: url("../img/details/minus.png") no-repeat center left; 
+}
+/*第一个li下的.open旁边的ul，高为64*/
+#detailsleft li:nth-child(1)>.open+ul{
+  margin-top:10px;
+  height:174px;
+}
+/*第2个li下的.open旁边的ul，高为80*/
+#detailsleft li:nth-child(2)>.open+ul{
+  margin-top:10px;
+	height:144px
+}
+/*最后一个li下的.open旁边的ul高为106*/
+#detailsleft li:last-child>.open+ul{ 
+  /* display: block; */ 
+  margin-top:10px;  
+	height:230px;
+}
+
+/* 右详情 */
+#detailsright{
+  width: 1200px;
+  height: 800px;
+  position: absolute;
+  left:300px;
+  border: 1px solid #ccc;
+}
+.detailscenter{
+  width: 500px;
+  height: 800px;
+  position: absolute;
+  left:350px;
+  border: 1px solid #ccc;
+}
+.detailsbgimg{
+  width: 500px;
+  height: 500px;
+}
+.detailssmimg{
+  width:500px;
+  height: 100px;
+   margin:20px 40px;
+}
+.detailsbgtxt{
+  border:1px solid red;
+  text-align: center;
+}
+
+#pop{
+  position: absolute;
+  top:150px;
+  right:100px;
+  width:100px;
+  height:100px;
+  background-image:url(../img/details/xiaoxin.gif);
+  background-size:100%;
+}
